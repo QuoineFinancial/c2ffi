@@ -103,6 +103,7 @@ void C2FFIASTConsumer::HandleDecl(clang::Decl *d, const clang::NamedDecl *ns) {
     else if_cast(x, clang::VarDecl, d) PROC;
 
     /* C/C++ */
+    else if_cast(x, clang::LinkageSpecDecl, d) { PROC; HandleDeclContext(x->castToDeclContext(x),_ns); }
     else if_cast(x, clang::FieldDecl, d);
     else if_cast(x, clang::IndirectFieldDecl, d);
     else if_cast(x, clang::CXXMethodDecl, d);
