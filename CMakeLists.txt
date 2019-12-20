@@ -41,7 +41,7 @@ target_include_directories(c2ffi PUBLIC
   )
 target_link_directories(
   c2ffi PUBLIC
-  /usr/local/Cellar/llvm/9.0.0_1/lib/
+  /usr/local/opt/llvm/lib/
   )
 target_link_libraries(c2ffi PUBLIC
   clangFrontendTool
