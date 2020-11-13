@@ -39,9 +39,8 @@ target_include_directories(c2ffi PUBLIC
   ${LLVM_INCLUDE_DIRS}
   ${SOURCE_ROOT}/src/include
   )
-target_link_directories(
-  c2ffi PUBLIC
-  /usr/local/opt/llvm/lib/
+target_link_directories(c2ffi PUBLIC
+  ${LLVM_INSTALL_PREFIX}/lib/
   )
 target_link_libraries(c2ffi PUBLIC
   clangFrontendTool
